@@ -1,0 +1,202 @@
+/* Base styles for all screen sizes */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.about-page{
+    text-align: center;
+    color: red;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px; /* Spacing between main content and sidebar */
+}
+
+.hero {
+    flex: 2; /* Takes up more space */
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.tell{
+    display: flex;
+    padding: 21px;
+    gap: 20px;
+}
+
+.heroine{
+    flex: auto;
+    background-color: gray;
+    padding: auto;
+    border-radius: 9px;
+}
+
+.hero h1 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.hero button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content-section {
+    flex: 2; /* Takes up more space */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Basic grid for larger screens */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.grid-container .item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: sticky; /* Example of sticky footer */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media query for tablets (min-width: 601px and max-width: 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        flex-direction: row; /* Keep main and sidebar side-by-side */
+    }
+
+    .hero, .content-section {
+        flex: 3; /* Adjust flex for tablet view */
+    }
+
+    .sidebar {
+        flex: 1;
+    }
+
+    .nav-links li {
+        margin-left: 15px;
+    }
+}
+
+/* Media query for mobile devices (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid #555;
+    }
+
+    .container {
+        flex-direction: column; /* Stack main content and sidebar */
+    }
+
+    .hero, .content-section, .sidebar {
+        margin-bottom: 20px;
+    }
